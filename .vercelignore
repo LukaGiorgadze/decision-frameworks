@@ -1,0 +1,9 @@
+tests/
+test-results/
+playwright-report/
+PLAN.md
+AGENTS.md
+CLAUDE.md
+README.md
+VALIDATION.md
+.git/
