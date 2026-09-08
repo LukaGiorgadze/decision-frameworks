@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "@/components/site-header";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const handwriting = localFont({ src: "../public/fonts/patrick-hand.ttf", variable: "--font-hand", display: "swap" });
 
 export const metadata: Metadata = {
   title: { default: "Decision Frameworks — A little structure. A clearer decision.", template: "%s | Decision Frameworks" },
@@ -8,10 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>
+  return <html lang="en" className={handwriting.variable}><body>
     <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:p-3">Skip to content</a>
-    <SiteHeader />
     {children}
-    <footer className="site-shell mt-16 pb-8 no-print"><div className="flex flex-wrap justify-between gap-3 border-t pt-6 text-[13px] text-muted-foreground"><p>A little structure. A clearer decision.</p><p>Made for thinking things through.</p></div></footer>
+
   </body></html>;
 }

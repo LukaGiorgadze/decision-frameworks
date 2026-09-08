@@ -3,7 +3,7 @@ import { frameworks } from "../../lib/frameworks";
 
 test("catalog search, category filter, empty state, and navigation", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("clearer decision");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Decision frameworks");
   await expect(page.getByRole("status")).toHaveText("Showing 6 of 6 frameworks");
   await page.getByLabel("Search frameworks").fill("weighted");
   await expect(page.getByRole("status")).toHaveText("Showing 1 of 6 frameworks");
@@ -20,19 +20,19 @@ test("matrix saves, restores, moves tasks, preserves examples, and confirms rese
   await page.getByRole("button", { name: "Add task to do now", exact: true }).click();
   const quadrant = page.getByRole("region", { name: "Do now quadrant", exact: true });
   await quadrant.getByLabel("Task", { exact: true }).fill("Fix customer issue");
+  await quadrant.getByText("Details", { exact: true }).click();
   await quadrant.getByLabel("Next action (optional)").fill("Call Jordan");
   await quadrant.getByLabel("Owner (optional)").fill("Alex");
   await quadrant.getByLabel("Date (optional)").fill("2026-10-01");
-  await expect(page.getByRole("status")).toHaveText("Saved in this browser");
   await page.reload();
   await expect(page.getByLabel("What are you deciding?", { exact: true })).toHaveValue("My week");
   await expect(quadrant.getByLabel("Task", { exact: true })).toHaveValue("Fix customer issue");
+  await quadrant.getByText("Details", { exact: true }).click();
   await quadrant.getByLabel("Move to quadrant").selectOption("schedule");
   await expect(page.getByRole("region", { name: "Schedule quadrant", exact: true }).getByLabel("Task", { exact: true })).toHaveValue("Fix customer issue");
-  await page.getByText("See a worked example", { exact: true }).click();
+  await page.getByText("How to use this framework", { exact: true }).click();
   await expect(page.getByLabel("What are you deciding?", { exact: true })).toHaveValue("My week");
-  await page.getByRole("link", { name: "All frameworks", exact: true }).click();
-  await expect(page.getByText("· Draft saved", { exact: true })).toBeVisible();
+  await page.getByRole("link", { name: "Back", exact: true }).click();
   await page.getByRole("link", { name: "Eisenhower Matrix", exact: true }).click();
   await expect(page.getByLabel("What are you deciding?", { exact: true })).toHaveValue("My week");
   await page.getByRole("button", { name: "Start over", exact: true }).click();
@@ -170,7 +170,7 @@ test("the directory and method explanations remain readable without JavaScript",
   await expect(page.getByRole("link", { name: "Eisenhower Matrix", exact: true })).toBeVisible();
   await page.getByRole("link", { name: "Eisenhower Matrix", exact: true }).click();
   await expect(page.getByText("Enable JavaScript to edit and save this worksheet.", { exact: false })).toBeVisible();
-  await page.getByText("See a worked example", { exact: true }).click();
+  await page.getByText("How to use this framework", { exact: true }).click();
   await expect(page.getByText("Make space for the important work in your week.", { exact: true })).toBeVisible();
   await context.close();
 });

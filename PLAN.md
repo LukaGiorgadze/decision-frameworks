@@ -1,3 +1,11 @@
+**Current worksheet refinements:** Show a Back link to the directory in place of save status. Remove draft badges, storage footer copy, and card arrows. Keep automatic saving and storage error messages. Underline all inputs, including option names; use larger help and supporting text.
+
+**Latest reference update:** Use handwritten typography and pencil-style framework illustrations on a textured paper sheet over a light textured parchment background. Keep only search and category filters above the three-column framework cards. Remove global navigation, visible page titles, descriptions, and breadcrumbs; preserve accessible page headings and printed titles. The current direction supersedes earlier serif and header styling below.
+
+**Latest visual direction:** Make the entire site feel like a paper workbook: warm textured desk background, ivory paper cards and worksheet sheets, serif headings, ink-colored entries, and ruled writing areas. Keep the three-column catalog and minimal copy. Use custom CSS over the accessible controls; avoid rounded app panels and nested outlines. This supersedes earlier color and input styling below.
+
+**Current UI direction (September 8, 2026):** The user revised the directory to large cards, three per desktop row. Keep visible copy minimal; place method instructions and examples under one optional help section, collapse optional worksheet notes, and avoid repeated summaries. Use borderless sections, soft filled inputs, editable option headings, and quiet text actions instead of nested outlined boxes. This supersedes the table and always-visible instruction layout below.
+
 **Decision Frameworks — implementation plan**
 
 Planning only. Implementation has not started. The six-framework selection and details below are proposed defaults; browser saving, no accounts, no AI, and a first release of five or six frameworks are confirmed user choices.

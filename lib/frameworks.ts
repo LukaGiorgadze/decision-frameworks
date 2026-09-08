@@ -16,7 +16,7 @@ export type Framework = {
 const catalog: Framework[] = [
   {
     id: "cost-benefit-analysis", name: "Cost–Benefit Analysis", category: "Compare options", format: "Comparison table",
-    description: "Weigh what each option will cost against what you expect to gain.",
+    description: "Compare costs with expected benefits.",
     instructions: ["Choose a shared currency and evaluation period.", "List the costs and benefits of each option over that whole period.", "Compare net benefits alongside the things money cannot measure."],
     limitation: "This is a simplified, undiscounted comparison of your estimates. Nonmonetary effects, timing, and uncertainty still matter.",
     source: { title: "UK Government: the Green Book", url: "https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government" },
@@ -24,7 +24,7 @@ const catalog: Framework[] = [
   },
   {
     id: "eisenhower-matrix", name: "Eisenhower Matrix", category: "Prioritize", format: "2 × 2 matrix",
-    description: "Separate what needs your attention now from what can wait.",
+    description: "Sort tasks by urgency and importance.",
     instructions: ["Important tasks support your goals; urgent tasks need attention soon.", "Add each task to the quadrant that fits it best.", "Give scheduled tasks a date and delegated tasks an owner."],
     limitation: "You decide what is important and urgent. Revisit the matrix as deadlines, priorities, and circumstances change.",
     source: { title: "The Eisenhower Matrix", url: "https://www.eisenhower.me/" },
@@ -32,7 +32,7 @@ const catalog: Framework[] = [
   },
   {
     id: "pre-mortem-analysis", name: "Pre-mortem Analysis", category: "Assess risks", format: "Risk worksheet",
-    description: "Imagine a plan has failed, then work backward to prevent it.",
+    description: "Spot what could go wrong and plan ahead.",
     instructions: ["Describe your plan and a future point when you will assess it.", "Imagine it has failed. Write down the possible reasons why.", "Identify warning signs and an action to prevent each failure."],
     limitation: "This worksheet helps you surface possible risks. It does not estimate their probability or guarantee that every risk is covered.",
     source: { title: "Gary Klein: the pre-mortem method", url: "https://www.gary-klein.com/premortem" },
@@ -40,7 +40,7 @@ const catalog: Framework[] = [
   },
   {
     id: "rice-scoring", name: "RICE Scoring", category: "Prioritize", format: "Scoring table",
-    description: "Rank ideas by reach, impact, confidence, and the effort involved.",
+    description: "Prioritize ideas by reach, impact, confidence, and effort.",
     instructions: ["Choose one period for estimating reach across all ideas.", "Estimate impact, confidence, and effort in person-months.", "Compare scores, then consider dependencies and the evidence behind your estimates."],
     limitation: "Scores are estimates, not commitments. A lower-scoring idea may be a dependency or meet an essential requirement.",
     source: { title: "Intercom: the RICE framework", url: "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/" },
@@ -48,7 +48,7 @@ const catalog: Framework[] = [
   },
   {
     id: "ten-ten-ten", name: "10–10–10 Rule", category: "Think long term", format: "Reflection worksheet",
-    description: "Consider how a choice will feel in 10 minutes, 10 months, and 10 years.",
+    description: "Explore a choice in 10 minutes, 10 months, and 10 years.",
     instructions: ["Write down the options you are considering.", "Explore each option's consequences and your feelings at all three time horizons.", "Compare those reflections with your values and choose a next step."],
     limitation: "Long-term reflections are possibilities, not predictions. Use them to clarify what matters to you, rather than to assign a score.",
     source: { title: "Suzy Welch on 10–10–10", url: "https://www.linkedin.com/posts/suzywelch_today-a-widely-shared-social-media-post-activity-7128833711290118145-S2f1" },
@@ -56,7 +56,7 @@ const catalog: Framework[] = [
   },
   {
     id: "weighted-scoring", name: "Weighted Scoring Model", category: "Compare options", format: "Scoring table",
-    description: "Compare your options against the criteria that matter most to you.",
+    description: "Compare options using what matters most to you.",
     instructions: ["Name your options and the criteria you care about.", "Weight each criterion from 1 to 5, then rate each option from 1 to 5.", "A higher rating always means more desirable. Compare the weighted scores and trade-offs."],
     limitation: "Your weights and ratings shape the ranking. The highest score supports discussion; it does not make the decision for you.",
     source: { title: "ASQ: decision matrices", url: "https://asq.org/quality-resources/decision-matrix" },
